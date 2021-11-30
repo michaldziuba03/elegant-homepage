@@ -39,6 +39,7 @@ const BookmarkItem: FunctionalComponent<IProps> = ({ id, title, favicon, url, on
 
     function handleContextMenu(e: any) {
         e.preventDefault();
+        if (window.contextMenuActive) return;
         setContextPoint({ x: e.pageX, y: e.pageY });
         setShowContext(true);
     }

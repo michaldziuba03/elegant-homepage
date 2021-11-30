@@ -27,6 +27,7 @@ const EditModal: FunctionComponent<IProps> = ({ onClose, onUpdate, formData }) =
     
     function handleSubmit() {
         onUpdate(form);
+        onClose();
     }
 
     return (
@@ -54,7 +55,7 @@ const EditModal: FunctionComponent<IProps> = ({ onClose, onUpdate, formData }) =
 
                 <div className='column'>
                     <button onClick={onClose}>Close</button>
-                    <button onClick={handleSubmit}>Add</button>
+                    <button onClick={handleSubmit}>Edit</button>
                 </div>
             </Fragment>
         </Modal>

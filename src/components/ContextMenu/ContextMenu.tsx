@@ -29,10 +29,12 @@ const ContextMenu: FunctionalComponent<IProps> = ({ options, onClose, position }
     }
 
     useEffect(() => {
+        window.contextMenuActive = true;
         window.addEventListener('click', onClose);
         window.addEventListener('contextmenu', hideContextMenu);
 
         return () => { 
+            window.contextMenuActive = false;
             window.removeEventListener('click', onClose);
             window.removeEventListener('contextmenu', hideContextMenu);
         };
