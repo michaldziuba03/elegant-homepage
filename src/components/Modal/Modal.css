@@ -1,0 +1,44 @@
+.modal {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    position: fixed;
+    width: 500px;
+    height: 250px;
+    background-color: #fff;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    padding: 16px 30px;
+    animation: modal-show .2s;
+}
+
+.modal input {
+    border-radius: 3px;
+    border: 1px solid gray;
+    font-size: 16px;
+    padding: 4px;
+    margin-bottom: 24px;
+    width: 100%;
+}
+
+.modal button {
+    width: 100px;
+    padding: 8px 16px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 16px;
+}
+
+@keyframes modal-show {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,13 @@
+.bookmarks {
+    display: flex;
+    justify-content: space-between;
+    width: 689px;
+    margin-top: 44px;
+}
+
+@media (max-width: 762px) {
+	.bookmarks {
+		width: 349px;
+        flex-wrap: wrap;
+	}
+}
