@@ -49,6 +49,7 @@ export const websiteIcons = {
     'figma.com':  '/assets/websites/figma.png',
     'github.com':  '/assets/websites/github.png',
     'gitlab.com':  '/assets/websites/gitlab.png',
+    'mail.google.com': '/assets/websites/gmail.png',
     'google.com':  '/assets/websites/google.png',
     'jbzd.com.pl':  '/assets/websites/jbzd.png',
     'instagram.com':  '/assets/websites/instagram.png',
@@ -68,6 +69,15 @@ export const websiteIcons = {
     'stackoverflow.com': '/assets/websites/stackoverflow.png',
     'twitter.com': '/assets/websites/twitter.png',
     'nestjs.com': '/assets/websites/nestjs.png',
+    'netflix.com': '/assets/websites/netflix.png',
+    'outlook.live.com': '/assets/websites/outlook.png',
+    'office.live.com': '/assets/websites/office.png',
+    'www.office.com': '/assets/websites/office.png',
+    'teams.microsoft.com': '/assets/websites/teams.png',
+    'microsoft.com': '/assets/websites/microsoft.png',
+    'teams.com': '/assets/websites/microsoft.png',
+    'protonmail.com': '/assets/websites/protonmail.png',
+    'odrabiamy.pl': '/assets/websites/odrabiamy.png',
 }
 
 export function getWebsiteIcon(url: string) {
