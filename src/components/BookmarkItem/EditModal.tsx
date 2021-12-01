@@ -21,6 +21,7 @@ const EditModal: FunctionComponent<IProps> = ({ onClose, onUpdate, formData }) =
     const [form, setForm] = useState(formData);
 
     useEffect(() => {
+        if (!inputRef.current) return;
         inputRef.current.focus();
     }, []);
 
@@ -55,7 +56,8 @@ const EditModal: FunctionComponent<IProps> = ({ onClose, onUpdate, formData }) =
                         name="url" 
                         value={form.url} 
                         placeholder='URL' 
-                        onChange={handleInput} 
+                        onChange={handleInput}
+                        ref={inputRef}
                     />
                 </div>
 

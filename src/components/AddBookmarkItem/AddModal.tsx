@@ -20,6 +20,7 @@ const AddModal: FunctionComponent<IProps> = ({ onClose, onCreate }) => {
     });
 
     useEffect(() => {
+        if (!inputRef.current) return;
         inputRef.current.focus();
     }, []);
 
@@ -38,11 +39,11 @@ const AddModal: FunctionComponent<IProps> = ({ onClose, onCreate }) => {
             <Fragment>
                 <h3>Add bookmark</h3>
                 <div className='column'>
-                    <input ref={inputRef} autofocus name="name" placeholder='Name' onChange={handleInput} />
+                    <input autofocus name="name" placeholder='Name' onChange={handleInput} />
                 </div>
 
                 <div className='column'>
-                    <input name="url" placeholder='URL' onChange={handleInput} />
+                    <input ref={inputRef} name="url" placeholder='URL' onChange={handleInput} />
                 </div>
 
                 <div className='column'>
