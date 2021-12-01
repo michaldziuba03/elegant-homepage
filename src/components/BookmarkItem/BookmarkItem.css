@@ -1,3 +1,7 @@
+.container {
+    height: 120px;
+}
+
 .bookmark {
     z-index: 10;
     width: 94px;
@@ -28,8 +32,12 @@
     user-select: none;
     max-width: 94px;
     font-size: 14px;
+    height: 25px;
     white-space: nowrap;
     overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .bookmark:hover {

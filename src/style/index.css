@@ -9,8 +9,10 @@ html, body {
 	align-items: center;
 	padding: 0;
 	margin: 0;
-	background-repeat: no-repeat;
-	background-position: center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 	font-family: 'Prompt', sans-serif;
 	font-weight: 400;
 	color: #444;
@@ -21,14 +23,6 @@ html, body {
 
 :root {
 	--dark-bg: #00000065;
-}
-
-@media (orientation: landscape) {
-	body {
-		background-repeat: no-repeat;
-		background-size: 100% auto;
-		background-position: center;
-	}
 }
 
 * {

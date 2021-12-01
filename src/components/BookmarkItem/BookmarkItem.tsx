@@ -61,15 +61,15 @@ const BookmarkItem: FunctionalComponent<IProps> = ({ id, title, favicon, url, on
         setModal(false);
     }
 
-    function updateBookmark({ name, url }: IEditBookmark) {
-        const favicon = getWebsiteIcon(url);
+    function updateBookmark(newBookmark: IEditBookmark) {
         const bookmark = {
             id,
-            url,
-            title: name,
-            favicon
+            url: newBookmark.url,
+            title: newBookmark.name,
+            favicon: getWebsiteIcon(newBookmark.url),
         }
 
+        setIcon(bookmark.favicon);
         onUpdate(bookmark);
     }
 
@@ -80,6 +80,7 @@ const BookmarkItem: FunctionalComponent<IProps> = ({ id, title, favicon, url, on
             <div 
                 onClick={handleClick}
                 onContextMenu={handleContextMenu}
+                class={style.container}
                 style={{ textAlign: 'center', zIndex: 10, paddingBottom: '16px' }}>
                 <div class={style.bookmark}>
                     <img

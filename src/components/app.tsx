@@ -13,7 +13,7 @@ const App: FunctionalComponent = () => {
     useEffect(() => {
         const { url, author } = getBackground();
         setAuthor(author);
-        document.body.style.backgroundImage = `url('${url}')`;
+        document.body.style.background = `url('${url}') no-repeat center center fixed`;
     }, []);
 
     function closeMenu() {
