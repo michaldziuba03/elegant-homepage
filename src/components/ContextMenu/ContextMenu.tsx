@@ -26,6 +26,7 @@ const ContextMenu: FunctionalComponent<IProps> = ({ options, onClose, position }
     
     function hideContextMenu(e: Event) {
         e.preventDefault();
+        onClose();
     }
 
     useEffect(() => {

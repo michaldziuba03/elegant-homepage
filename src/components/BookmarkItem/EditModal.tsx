@@ -43,7 +43,6 @@ const EditModal: FunctionComponent<IProps> = ({ onClose, onUpdate, formData }) =
                 <h3>Edit bookmark</h3>
                 <div className='column'>
                     <input
-                        autofocus
                         name="name"
                         value={form.name}
                         placeholder='Name' 
@@ -53,6 +52,7 @@ const EditModal: FunctionComponent<IProps> = ({ onClose, onUpdate, formData }) =
 
                 <div className='column'>
                     <input 
+                        autofocus
                         name="url" 
                         value={form.url} 
                         placeholder='URL' 

@@ -39,11 +39,11 @@ const AddModal: FunctionComponent<IProps> = ({ onClose, onCreate }) => {
             <Fragment>
                 <h3>Add bookmark</h3>
                 <div className='column'>
-                    <input autofocus name="name" placeholder='Name' onChange={handleInput} />
+                    <input name="name" placeholder='Name' onChange={handleInput} />
                 </div>
 
                 <div className='column'>
-                    <input ref={inputRef} name="url" placeholder='URL' onChange={handleInput} />
+                    <input autofocus ref={inputRef} name="url" placeholder='URL' onChange={handleInput} />
                 </div>
 
                 <div className='column'>
