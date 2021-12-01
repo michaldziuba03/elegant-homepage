@@ -60,6 +60,13 @@ export const websiteIcons = {
     'wikipedia.org': '/assets/websites/wikipedia.png',
     'wykop.pl': '/assets/websites/wykop.png',
     'youtube.com': '/assets/websites/youtube.png',
+    'spotify.com': '/assets/websites/spotify.png',
+    'x-kom.pl': '/assets/websites/xkom.png',
+    'startpage.com': '/assets/websites/startpage.png',
+    'npmjs.com': '/assets/websites/npm.png',
+    'nodejs.org': '/assets/websites/node.png',
+    'stackoverflow.com': '/assets/websites/stackoverflow.png',
+    'twitter.com': '/assets/websites/twitter.png',
 }
 
 export function getWebsiteIcon(url: string) {

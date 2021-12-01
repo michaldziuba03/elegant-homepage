@@ -21,6 +21,7 @@ const BookmarkItem: FunctionalComponent<IProps> = ({ id, title, favicon, url, on
     const [showModal, setModal] = useState(false);
 
     const options = [
+        { label: 'Open', action: handleClick },
         { label: 'Edit', action: setEditState },
         { label: 'Delete', action: deleteBookmark },
     ]
