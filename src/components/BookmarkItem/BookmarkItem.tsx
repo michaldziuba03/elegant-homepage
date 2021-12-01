@@ -27,7 +27,7 @@ const BookmarkItem: FunctionalComponent<IProps> = ({ id, title, favicon, url, on
     ]
 
     function fallbackImage() {
-        setIcon('/assets/websites/generic.png');
+        setIcon('assets/websites/generic.png');
     }
 
     function setEditState() {

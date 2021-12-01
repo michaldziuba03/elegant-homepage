@@ -78,6 +78,13 @@ export const websiteIcons = {
     'teams.com': 'assets/websites/microsoft.png',
     'protonmail.com': 'assets/websites/protonmail.png',
     'odrabiamy.pl': 'assets/websites/odrabiamy.png',
+    'messenger.com': 'assets/websites/messenger.png',
+    'slack.com': 'assets/websites/slack.png',
+    'zoom.us': 'assets/websites/zoom.png',
+    'tutanota.com': 'assets/websites/tutanota.png',
+    'o2.pl': 'assets/websites/o2.png',
+    'interia.pl': 'assets/websites/interia.png',
+    'medium.com': 'assets/websites/medium.png',
 }
 
 export function getWebsiteIcon(url: string) {
