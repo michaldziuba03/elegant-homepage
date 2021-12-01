@@ -8,10 +8,10 @@
     z-index: 100;
     background-color: #fff;
     filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.25));
-    animation: show-menu .5s;
+    animation: show-options .5s;
 }
 
-@keyframes show-menu {
+@keyframes show-options {
     from {
         right: -400px;
     }

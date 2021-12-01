@@ -1,8 +1,8 @@
 const backgrounds = [
-    { url: '/assets/backgrounds/bg1.jpg', author: 'Dylan Calluy' },
-    { url: '/assets/backgrounds/bg2.jpg', author: 'Adrian N' },
-    { url: '/assets/backgrounds/bg3.jpg', author: 'Kellen Riggin' },
-    { url: '/assets/backgrounds/bg4.jpg', author: 'Adrew Svk' },
+    { url: 'assets/backgrounds/bg1.jpg', author: 'Dylan Calluy' },
+    { url: 'assets/backgrounds/bg2.jpg', author: 'Adrian N' },
+    { url: 'assets/backgrounds/bg3.jpg', author: 'Kellen Riggin' },
+    { url: 'assets/backgrounds/bg4.jpg', author: 'Adrew Svk' },
 ]
 
 export function getBackground() {
@@ -27,13 +27,13 @@ export function getBookmarks(): IBookmark[] {
     const bookmarksStr = localStorage.getItem(key);
 
     if (!bookmarksStr) {
-        return [];
+        return Array(6).fill(null);
     }
 
     try {
         return JSON.parse(bookmarksStr);
     } catch {
-        return [];
+        return Array(6).fill(null);
     }
 }
 
@@ -43,41 +43,41 @@ export function saveBookmarks(bookmarks: IBookmark[]) {
 }
 
 export const websiteIcons = {
-    'discord.com': '/assets/websites/discord.png',
-    'duckduckgo.com': '/assets/websites/duckduckgo.png',
-    'facebook.com': '/assets/websites/facebook.png',
-    'figma.com': '/assets/websites/figma.png',
-    'github.com': '/assets/websites/github.png',
-    'gitlab.com': '/assets/websites/gitlab.png',
-    'mail.google.com': '/assets/websites/gmail.png',
-    'google.com': '/assets/websites/google.png',
-    'jbzd.com.pl': '/assets/websites/jbzd.png',
-    'instagram.com': '/assets/websites/instagram.png',
-    'kde.com':  '/assets/websites/kde.png',
-    'librus.pl': '/assets/websites/librus.png',
-    'onet.pl': '/assets/websites/onet.png',
-    'react.com': '/assets/websites/react.png',
-    'reddit.com': '/assets/websites/reddit.png',
-    'wikipedia.org': '/assets/websites/wikipedia.png',
-    'wykop.pl': '/assets/websites/wykop.png',
-    'youtube.com': '/assets/websites/youtube.png',
-    'spotify.com': '/assets/websites/spotify.png',
-    'x-kom.pl': '/assets/websites/xkom.png',
-    'startpage.com': '/assets/websites/startpage.png',
-    'npmjs.com': '/assets/websites/npm.png',
-    'nodejs.org': '/assets/websites/node.png',
-    'stackoverflow.com': '/assets/websites/stackoverflow.png',
-    'twitter.com': '/assets/websites/twitter.png',
-    'nestjs.com': '/assets/websites/nestjs.png',
-    'netflix.com': '/assets/websites/netflix.png',
-    'outlook.live.com': '/assets/websites/outlook.png',
-    'office.live.com': '/assets/websites/office.png',
-    'www.office.com': '/assets/websites/office.png',
-    'teams.microsoft.com': '/assets/websites/teams.png',
-    'microsoft.com': '/assets/websites/microsoft.png',
-    'teams.com': '/assets/websites/microsoft.png',
-    'protonmail.com': '/assets/websites/protonmail.png',
-    'odrabiamy.pl': '/assets/websites/odrabiamy.png',
+    'discord.com': 'assets/websites/discord.png',
+    'duckduckgo.com': 'assets/websites/duckduckgo.png',
+    'facebook.com': 'assets/websites/facebook.png',
+    'figma.com': 'assets/websites/figma.png',
+    'github.com': 'assets/websites/github.png',
+    'gitlab.com': 'assets/websites/gitlab.png',
+    'mail.google.com': 'assets/websites/gmail.png',
+    'google.com': 'assets/websites/google.png',
+    'jbzd.com.pl': 'assets/websites/jbzd.png',
+    'instagram.com': 'assets/websites/instagram.png',
+    'kde.com':  'assets/websites/kde.png',
+    'librus.pl': 'assets/websites/librus.png',
+    'onet.pl': 'assets/websites/onet.png',
+    'react.com': 'assets/websites/react.png',
+    'reddit.com': 'assets/websites/reddit.png',
+    'wikipedia.org': 'assets/websites/wikipedia.png',
+    'wykop.pl': 'assets/websites/wykop.png',
+    'youtube.com': 'assets/websites/youtube.png',
+    'spotify.com': 'assets/websites/spotify.png',
+    'x-kom.pl': 'assets/websites/xkom.png',
+    'startpage.com': 'assets/websites/startpage.png',
+    'npmjs.com': 'assets/websites/npm.png',
+    'nodejs.org': 'assets/websites/node.png',
+    'stackoverflow.com': 'assets/websites/stackoverflow.png',
+    'twitter.com': 'assets/websites/twitter.png',
+    'nestjs.com': 'assets/websites/nestjs.png',
+    'netflix.com': 'assets/websites/netflix.png',
+    'outlook.live.com': 'assets/websites/outlook.png',
+    'office.live.com': 'assets/websites/office.png',
+    'www.office.com': 'assets/websites/office.png',
+    'teams.microsoft.com': 'assets/websites/teams.png',
+    'microsoft.com': 'assets/websites/microsoft.png',
+    'teams.com': 'assets/websites/microsoft.png',
+    'protonmail.com': 'assets/websites/protonmail.png',
+    'odrabiamy.pl': 'assets/websites/odrabiamy.png',
 }
 
 export function getWebsiteIcon(url: string) {
@@ -117,7 +117,7 @@ export function getSearchIcon() {
     const key = prefixKey('search')
     const engine = localStorage.getItem(key) || SearchEngines.GOOGLE;
 
-    return `/assets/engines/${engine}.png`;
+    return `assets/engines/${engine}.png`;
 }
 
 export function search(q: string) {
