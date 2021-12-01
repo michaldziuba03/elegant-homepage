@@ -1,5 +1,5 @@
 import { FunctionalComponent, h } from 'preact';
-import { useState } from 'preact/hooks';
+import { useEffect, useState } from 'preact/hooks';
 import { getBookmarks, saveBookmarks } from '../../options';
 import Item from './Item';
 import style from './Bookmarks.css';
@@ -7,6 +7,16 @@ import style from './Bookmarks.css';
 const Bookmarks: FunctionalComponent = () => {
     let startId = 0;
     const [bookmarks, setBookmarks] = useState<any[]>(getBookmarks());
+
+    useEffect(() => {
+        window.addEventListener('storage', readBookmarksFromStorage);
+
+        return () => window.removeEventListener('storage', readBookmarksFromStorage);
+    }, []);
+
+    function readBookmarksFromStorage() {
+        setBookmarks(getBookmarks());
+    }
 
     function handleDeleteBookmark(id: number) {
         setBookmarks(_bookmarks => {

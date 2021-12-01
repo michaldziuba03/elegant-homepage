@@ -1,5 +1,5 @@
 import { Fragment, FunctionComponent, h } from 'preact';
-import { useState } from 'preact/hooks';
+import { useEffect, useRef, useState } from 'preact/hooks';
 import Modal from '../Modal/Modal';
 
 interface IProps {
@@ -13,10 +13,15 @@ export interface IEditBookmark {
 }
 
 const AddModal: FunctionComponent<IProps> = ({ onClose, onCreate }) => {
+    const inputRef = useRef<any>();
     const [form, setForm] = useState({
         name: '',
         url: '',
     });
+
+    useEffect(() => {
+        inputRef.current.focus();
+    }, []);
 
     function handleInput(e: any) {
         const value = e.target.value;
@@ -33,7 +38,7 @@ const AddModal: FunctionComponent<IProps> = ({ onClose, onCreate }) => {
             <Fragment>
                 <h3>Add bookmark</h3>
                 <div className='column'>
-                    <input name="name" placeholder='Name' onChange={handleInput} />
+                    <input ref={inputRef} autofocus name="name" placeholder='Name' onChange={handleInput} />
                 </div>
 
                 <div className='column'>

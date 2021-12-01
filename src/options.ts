@@ -67,6 +67,7 @@ export const websiteIcons = {
     'nodejs.org': '/assets/websites/node.png',
     'stackoverflow.com': '/assets/websites/stackoverflow.png',
     'twitter.com': '/assets/websites/twitter.png',
+    'nestjs.com': '/assets/websites/nestjs.png',
 }
 
 export function getWebsiteIcon(url: string) {

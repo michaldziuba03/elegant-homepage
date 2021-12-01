@@ -1,6 +1,7 @@
 .bookmarks {
     display: flex;
     justify-content: space-between;
+    min-height: 150px;
     width: 689px;
     margin-top: 44px;
 }
