@@ -44,15 +44,15 @@ export function saveBookmarks(bookmarks: IBookmark[]) {
 
 export const websiteIcons = {
     'discord.com': '/assets/websites/discord.png',
-    'duckduckgo.com':  '/assets/websites/duckduckgo.png',
-    'facebook.com':  '/assets/websites/facebook.png',
-    'figma.com':  '/assets/websites/figma.png',
-    'github.com':  '/assets/websites/github.png',
-    'gitlab.com':  '/assets/websites/gitlab.png',
+    'duckduckgo.com': '/assets/websites/duckduckgo.png',
+    'facebook.com': '/assets/websites/facebook.png',
+    'figma.com': '/assets/websites/figma.png',
+    'github.com': '/assets/websites/github.png',
+    'gitlab.com': '/assets/websites/gitlab.png',
     'mail.google.com': '/assets/websites/gmail.png',
-    'google.com':  '/assets/websites/google.png',
-    'jbzd.com.pl':  '/assets/websites/jbzd.png',
-    'instagram.com':  '/assets/websites/instagram.png',
+    'google.com': '/assets/websites/google.png',
+    'jbzd.com.pl': '/assets/websites/jbzd.png',
+    'instagram.com': '/assets/websites/instagram.png',
     'kde.com':  '/assets/websites/kde.png',
     'librus.pl': '/assets/websites/librus.png',
     'onet.pl': '/assets/websites/onet.png',
@@ -96,11 +96,21 @@ export function getWebsiteIcon(url: string) {
 export enum SearchEngines {
     GOOGLE = 'google',
     DDG = 'duckduckgo',
+    BING = 'bing',
+    QWANT = 'qwant',
+    SWISSCOWS = 'swisscows',
+    SEARX = 'searx',
+    YAHOO = 'yahoo',
 }
 
 const SearchUrls: any = {
     google: 'https://www.google.com/search?q=',
-    duckduckgo: 'https://duckduckgo.com/?q='
+    duckduckgo: 'https://duckduckgo.com/?q=',
+    bing: 'https://www.bing.com/search?q=',
+    yahoo: 'https://search.yahoo.com/search?p=',
+    qwant: 'https://www.qwant.com/?q=',
+    swisscows: 'https://swisscows.com/web?query=',
+    searx: 'https://searx.be/search?q='
 }
 
 export function getSearchIcon() {

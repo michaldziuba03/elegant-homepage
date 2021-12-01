@@ -37,6 +37,11 @@ const SettingsMenu: FunctionalComponent<IProps> = ({ onClose }) => {
                     <select value={engine} onChange={handleEngineChange}>
                         <option value="google">Google</option>
                         <option value="duckduckgo">DuckDuckGo</option>
+                        <option value="bing">Bing</option>
+                        <option value="yahoo">Yahoo</option>
+                        <option value="qwant">Qwant</option>
+                        <option value="swisscows">Swisscows</option>
+                        <option value="searx">Searx BE</option>
                     </select>
                 </div>
 
