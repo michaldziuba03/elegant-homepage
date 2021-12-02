@@ -3,21 +3,5 @@
   "version": "1.0.0",
   "manifest_version": 2,
   "short_name": "homepage",
-  "start_url": "/",
-  "display": "standalone",
-  "orientation": "portrait",
-  "background_color": "#fff",
-  "theme_color": "#673ab8",
-  "icons": [
-    {
-      "src": "/assets/icons/android-chrome-192x192.png",
-      "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "/assets/icons/android-chrome-512x512.png",
-      "type": "image/png",
-      "sizes": "512x512"
-    }
-  ]
+  "permissions": ["search", "bookmarks", "<all_urls>"]
 }
