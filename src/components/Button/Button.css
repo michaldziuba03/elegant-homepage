@@ -1,4 +1,4 @@
-button {
+.primary, .secondary {
     padding: 8px 32px;
     border: none;
     border-radius: 10px;
