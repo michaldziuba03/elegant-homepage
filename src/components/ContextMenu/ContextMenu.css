@@ -10,6 +10,7 @@
 }
 
 .option {
+    font-size: 15px;
     user-select: none;
     cursor: pointer;
     padding: 2px 16px;

@@ -22,12 +22,17 @@ const BookmarkItem: FunctionalComponent<IProps> = ({ id, title, favicon, url, on
 
     const options = [
         { label: 'Open', action: handleClick },
+        { label: 'Open in new tab', action: openNewTab },
         { label: 'Edit', action: setEditState },
         { label: 'Delete', action: deleteBookmark },
     ]
 
     function fallbackImage() {
         setIcon('assets/websites/generic.png');
+    }
+
+    function openNewTab() {
+        window.open(url, '_blank');
     }
 
     function setEditState() {
