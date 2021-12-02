@@ -1,5 +1,6 @@
 import { Fragment, FunctionComponent, h } from 'preact';
 import { useEffect, useRef, useState } from 'preact/hooks';
+import Button from '../Button/Button';
 import Modal from '../Modal/Modal';
 
 interface IProps {
@@ -47,8 +48,8 @@ const AddModal: FunctionComponent<IProps> = ({ onClose, onCreate }) => {
                 </div>
 
                 <div className='column'>
-                    <button onClick={onClose}>Close</button>
-                    <button onClick={handleSubmit}>Add</button>
+                    <Button onClick={onClose}> Close </Button>
+                    <Button onClick={handleSubmit} primary >Edit</Button>
                 </div>
                 
             </Fragment>
