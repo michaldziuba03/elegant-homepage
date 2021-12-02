@@ -5,7 +5,7 @@
   "homepage": ".",
   "license": "MIT",
   "scripts": {
-    "build": "preact build --no-prerender --no-inline-css --no-sw",
+    "build": "preact build --no-prerender --no-inline-css --no-sw && node scripts/transformHtml.js",
     "serve": "sirv build --port 8080 --cors --single",
     "dev": "preact watch",
     "lint": "eslint 'src/**/*.{js,jsx,ts,tsx}'",
