@@ -1,3 +1,5 @@
+import { getDefaultEngine, isWebExt } from "./extension";
+
 const backgrounds = [
     { url: 'assets/backgrounds/bg1.jpg', author: 'Dylan Calluy' },
     { url: 'assets/backgrounds/bg2.jpg', author: 'Adrian N' },
@@ -120,7 +122,40 @@ const SearchUrls: any = {
     searx: 'https://searx.be/search?q='
 }
 
-export function getSearchIcon() {
+export function setUseBrowserEngine(value: boolean) {
+    const key = prefixKey('browser-engine');
+    localStorage.setItem(key, value.toString());
+}
+
+export function useBrowserEngine() {
+    if (!isWebExt('search')) {
+        return false;
+    }
+
+    const key = prefixKey('browser-engine');
+    const item = localStorage.getItem(key);
+
+    if (!item) {
+        return true;
+    }
+
+    if (item === 'true') {
+        return true;
+    }
+
+    if (item === 'false') {
+        return false;
+    }
+    
+    return true;
+}
+
+export async function getSearchIcon() {
+    if (useBrowserEngine()) {
+        const defaultEngine = await getDefaultEngine();
+        return defaultEngine.favIconUrl;
+    }
+
     const key = prefixKey('search')
     const engine = localStorage.getItem(key) || SearchEngines.GOOGLE;
 
