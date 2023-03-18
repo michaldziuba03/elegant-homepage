@@ -1,7 +1,5 @@
 ## Elegant Home page for your browser
 #### Simple home page written in TypeScript and Preact
-Work in progress...
-<br>
 
 ### Features
 - Many awesome backgrounds
